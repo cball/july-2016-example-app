@@ -1,0 +1,5 @@
+{{#each organizations as |org|}}
+  <li {{action on-save org}} class={{if org.isStarred 'starred'}}>
+    {{org.name}}
+  </li>
+{{/each}}
