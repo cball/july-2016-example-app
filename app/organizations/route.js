@@ -2,10 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return [
-      { id: 1, name: 'Org 1', isStarred: true },
-      { id: 2, name: 'Org 2', isStarred: false }
-    ];
+    // return [
+    //   { id: 1, name: 'Org 1', isStarred: true },
+    //   { id: 2, name: 'Org 2', isStarred: false }
+    // ];
+    return [];
   },
 
   actions: {

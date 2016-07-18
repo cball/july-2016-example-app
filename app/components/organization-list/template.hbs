@@ -1,5 +1,17 @@
+{{!-- {{#if (gt starredOrganizations.length 0)}} --}}
+
+{{#if hasStarredOrganizations}}
+  <li>You have {{decorate-number starredOrganizations.length loud=true}} stars</li>
+{{/if}}
+
 {{#each organizations as |org|}}
   <li {{action on-save org}} class={{if org.isStarred 'starred'}}>
-    {{org.name}}
+    {{#if hasBlock}}
+      {{yield org}}
+    {{else}}
+      {{org.name}}
+    {{/if}}
   </li>
+{{else}}
+  {{yield to="inverse"}}
 {{/each}}
