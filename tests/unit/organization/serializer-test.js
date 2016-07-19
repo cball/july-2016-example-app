@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('organization', 'Unit | Serializer | organization', {
   // Specify the other units that are required for this test.
-  needs: ['serializer:organization']
+  needs: ['serializer:organization', 'model:repository']
 });
 
 // Replace this with your real tests.

@@ -1,8 +1,10 @@
 import Ember from 'ember';
+import GoToOrg from '../mixins/go-to-org';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(GoToOrg, {
   beforeModel() {
-    this.transitionTo('organizations');
+    // some other logic
+    this._super(...arguments);
   }
 
   // model() {

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import RSVP from 'rsvp';
-import config from '../config/environment';
+// import config from '../config/environment';
 
 export default Ember.Route.extend({
   ajax: Ember.inject.service(),
