@@ -1,0 +1,8 @@
+<p><img src={{model.organization.avatarUrl}}></p>
+<p>Total Repos: {{model.organization.publicRepos}}</p>
+
+<ul>
+  {{#each model.repos as |repo|}}
+    <li>{{repo.name}}</li>
+  {{/each}}
+</ul>

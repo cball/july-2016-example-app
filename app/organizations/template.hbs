@@ -1,7 +1,13 @@
-{{#organization-list organizations=model on-save=(route-action 'star') as |org|}}
-  {{org.name}}
-{{else}}
-  NOOOOO
-{{/organization-list}}
+<div class="container">
+  <div class="sidebar">
+    {{#organization-list organizations=model on-save=(route-action 'star') as |org|}}
+      <img src={{org.avatarUrl}}> {{org.name}}
+    {{else}}
+      NOOOOO
+    {{/organization-list}}
+  </div>
 
-{{outlet}}
+  <div class="main">
+    {{outlet}}
+  </div>
+</div>

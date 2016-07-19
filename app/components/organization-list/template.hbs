@@ -5,12 +5,16 @@
 {{/if}}
 
 {{#each organizations as |org|}}
-  <li {{action on-save org}} class={{if org.isStarred 'starred'}}>
-    {{#if hasBlock}}
-      {{yield org}}
-    {{else}}
-      {{org.name}}
-    {{/if}}
+  <li class={{if org.isStarred 'starred'}}>
+    {{#link-to 'organizations.organization' org.login}}
+      {{#if hasBlock}}
+        {{yield org}}
+      {{else}}
+        {{org.name}}
+      {{/if}}
+    {{/link-to}}
+
+    {{!-- {{action on-save org}}  --}}
   </li>
 {{else}}
   {{yield to="inverse"}}
